@@ -1,29 +1,33 @@
 <template>
-  <div>
+  <div class="page">
       <div class="header">
           <router-link  tag="span" class="mui-icon-extra mui-icon-extra-arrowleftcricle" to="/home" id="back"></router-link>
-          <span class="mui-icon mui-icon-search"></span>&nbsp;&nbsp;
-          <span class="mui-icon mui-icon-more-filled"></span>
+          <a><img src="http://localhost:8080/static/img/search.png" class="search"></a>&nbsp;&nbsp;&nbsp;
+          <a><img src="http://localhost:8080/static/img/more.png" class="search"></a>
       </div>
       <br>
     <h3>{{info.title}}</h3>
     <p id="huida">查看全部 {{(info.msg).length}} 个回答 ></p>
     <div class="btn">
+      <!--mui提供的类有问题，有时会有延时 -->
       <button>
-        <span class="mui-icon-extra mui-icon-extra-addpeople"></span> 邀请回答
+        <!-- <span class="mui-icon-extra mui-icon-extra-addpeople"></span>  -->
+        
+        邀请回答
       </button>
       <button>
-        <span class="mui-icon mui-icon-compose"></span> 写回答
+        <!--  <span class="mui-icon mui-icon-compose"></span>  -->
+        写回答
       </button>
     </div>
 
     <div class="author">
-      <img src="http://localhost:8080/static/img.ico" />&nbsp;
+      <img src="http://localhost:8080/static/img.ico" id="authorimg"/>&nbsp;
       <p id="author">{{info.msg[id].author}}</p>
       <button id="guanzhu">+ 关注</button>
     </div>
 
-    <div class="content">{{info.msg[id].content}}</div>
+    <div class="content-page">{{info.msg[id].content}}</div>
     <div class="next">
       <!-- <router-link tag="button" class="mui-icon mui-icon-arrowthindown" :to="'/home/pageinfo/'+qid+Number(id+2)"></router-link> -->
       <button class="mui-icon mui-icon-arrowthindown" @click="next"></button>
@@ -86,11 +90,15 @@ export default {
 h3,#huida{
     text-indent: 10px;
 }
-img{
+#authorimg{
     margin-left: 10px;
 }
+.search{
+  height: 24px;
+  width: 24px;
+}
 /* 回答数 */
-p {
+.page p {
   margin-top: 20px;
   font-size: 17px;
 }
@@ -103,6 +111,7 @@ p {
     color: #2f3542;
     font-weight: 900;
     margin-right: auto;
+    height: 24px;
 }
 .mui-icon-search,.mui-icon-more-filled{
     font-weight: 900;
@@ -137,8 +146,9 @@ p {
   margin-right:10px;
   background-color: #F6F6F6;
 }
-.content {
+.content-page {
   margin: 10px;
+  padding-bottom: 15px;
   letter-spacing: 3px;
   line-height: 30px;
 }

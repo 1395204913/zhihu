@@ -1,32 +1,25 @@
 <template>
   <div>
-    <div class="mui-indexed-list-search mui-input-row mui-search">
-     <input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="输点啥呗" />
-    </div>
-    <div id="slider" class="mui-slider">
-      <div
-        id="sliderSegmentedControl"
-        class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted"
-      >
-        <div class="mui-scroll">
-          <a class="mui-control-item">关注</a>
-          <a class="mui-control-item mui-active">推荐</a>
-          <a class="mui-control-item">热榜</a>
-        </div>
-      </div>
-    </div>
     <div class="content">
       <ul>
-        <router-link  tag="li" v-for="item in question" :key="item.qid" :to="'/home/pageinfo/'+item.qid+item.msg[0].id">
+        <router-link
+          tag="li"
+          v-for="(item,index) in question"
+          :key="index"
+          :to="'/home/pageinfo/'+item.qid+item.msg[0].id"
+        >
           <strong>{{item.title}}</strong>
           <br />
-          <img src="http://localhost:8080/static/img.ico" />
+          <div class="author">
+            <img src="http://localhost:8080/static/img.ico" /> &nbsp;
           <p id="author">{{item.msg[0].author}}</p>
+          </div>
+          
           <br />
           <span>{{item.msg[0].content}}</span>
           <p>{{item.msg[0].agree}}赞同</p>&nbsp;&nbsp;
           <p>{{item.msg[0].comment}}评论</p>
-         <p class="mui-icon mui-icon-more-filled" id="more"></p>
+          <p class="mui-icon mui-icon-more-filled" id="more"></p>
         </router-link>
       </ul>
     </div>
@@ -63,11 +56,7 @@ export default {
 };
 </script>
 <style>
-.mui-scroll {
-  display: flex;
-  justify-content: space-around;
-  position: static;
-}
+
 * {
   touch-action: pan-y;
 }
@@ -86,6 +75,10 @@ li p {
   display: inline-block;
   /* vertical-align: middle; */
   margin-top: 10px;
+  font-size: 17px;
+}
+.author {
+  display: flex;
 }
 #author {
   color: black;
@@ -96,7 +89,7 @@ span {
   height: 60px;
   overflow: hidden;
 }
-#more{
+#more {
   float: right;
 }
 
