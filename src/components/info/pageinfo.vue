@@ -87,13 +87,13 @@ export default {
   
 }
 /* title、总回答数、img往右移动10px */
-h3,#huida{
+.page h3,#huida{
     text-indent: 10px;
 }
-#authorimg{
+.page #authorimg{
     margin-left: 10px;
 }
-.search{
+.page .search{
   height: 24px;
   width: 24px;
 }
@@ -103,25 +103,25 @@ h3,#huida{
   font-size: 17px;
 }
 /* 头部三个图标 */
-.header{
+.page .header{
     display: flex;
     padding-top: 10px;
 }
-#back{
+.page #back{
     color: #2f3542;
     font-weight: 900;
     margin-right: auto;
     height: 24px;
 }
-.mui-icon-search,.mui-icon-more-filled{
+.page .mui-icon-search,.mui-icon-more-filled{
     font-weight: 900;
 }
 /* 邀请回答和些回答 父容器采用display：flex使两button间无缝隙 */
-.btn {
+.page .btn {
   display: flex;
 }
 /* 邀请回答和些回答样式 */
-.btn button {
+.page .btn button {
   color: #2e86de;
   border-top: 1px solid gray;
   background-color: inherit;
@@ -129,14 +129,14 @@ h3,#huida{
   font-weight: bold;
   width: 50%;
 }
-.author {
+.page .author {
   display: flex;
 }
-#author {
+.page #author {
   display: inline-block;
   color: black;
 }
-#guanzhu {
+.page #guanzhu {
   margin-top: 15px;
   width: 80px;
   margin-left: auto;
@@ -146,26 +146,26 @@ h3,#huida{
   margin-right:10px;
   background-color: #F6F6F6;
 }
-.content-page {
+.page .content-page {
   margin: 10px;
   padding-bottom: 15px;
   letter-spacing: 3px;
   line-height: 30px;
 }
 /* 翻页按钮 有点瑕疵 */
-.next {
+.page .next {
   position: fixed;
   right: 5%;
   top: 70%;
 }
-.next button {
+.page .next button {
   border-radius: 70%;
   position: relative;
   line-height: 38px;
   
 }
  
-.footer {
+.page .footer {
   display: flex;
 }
 </style>

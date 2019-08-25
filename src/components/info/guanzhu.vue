@@ -1,19 +1,24 @@
 <template>
     <div class="guanzhu">
-        <h2 id="hh">不好意思</h2>
+        <h4 id="hh">不好意思</h4>
         <br>
-        <h2>您目前没有关注任何人</h2>
+        <h5>您目前没有关注任何人</h5>
     </div>
 </template>
 <style>
     .guanzhu{
         position: absolute;
-        top: 45%;
-        text-indent: 50px;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%,-50%);
     }
    .guanzhu  #hh{
-        text-indent: 130px;
-    }
+        text-indent: 25%;   
+      }
+      h5{
+          color: black;
+          font-weight: bold;
+      }
 </style>
 <script>
 

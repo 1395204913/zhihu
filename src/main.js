@@ -7,18 +7,18 @@ import VueRouter from 'vue-router'
 import axios from 'axios'
 
 // 导入mui样式
-import './lib/mui/css/mui.min.css'
+import './lib/mui/css/mui.css'
 import './lib/mui/css/icons-extra.css'
 
 // 按需导入 min-ui 中的组件
-import { Button,Toast } from 'mint-ui'
+// import { Button,Toast } from 'mint-ui'
 // Vue.config.productionTip = false
 Vue.prototype.$axios = axios
 // 安装路由
 Vue.use(VueRouter)
 // 注册mint-ui的组件
-Vue.component(Toast.name, Toast)
-Vue.component(Button.name, Button)
+// Vue.component(Toast.name, Toast)
+// Vue.component(Button.name, Button)
 /* eslint-disable no-new */
 var vm=new Vue({
   el: '#app',

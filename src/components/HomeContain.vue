@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <div class="content">
       <ul>
         <router-link
@@ -26,7 +26,7 @@
   </div>
 </template>
 <script>
-import mui from "../lib/mui/js/mui";
+// import mui from "../lib/mui/js/mui";
 
 export default {
   data() {
@@ -60,36 +60,36 @@ export default {
 * {
   touch-action: pan-y;
 }
-ul {
+.home ul {
   margin-left: 0;
   padding-left: 0;
 }
-li {
+.home li {
   list-style: none;
   /* margin-left: -38px; */
   padding-left: 8px;
   margin-bottom: 20px;
   border-bottom: black 1px solid;
 }
-li p {
+.home li p {
   display: inline-block;
   /* vertical-align: middle; */
   margin-top: 10px;
   font-size: 17px;
 }
-.author {
+.home .author {
   display: flex;
 }
-#author {
+.home #author {
   color: black;
 }
-span {
+.home span {
   display: block;
   width: 100%;
   height: 60px;
   overflow: hidden;
 }
-#more {
+.home #more {
   float: right;
 }
 

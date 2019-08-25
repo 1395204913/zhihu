@@ -65,6 +65,7 @@ body {
   padding-bottom: 40px;
   overflow-x: hidden;
 }
+
 .scroll {
   display: flex;
   justify-content: space-around;
