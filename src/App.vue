@@ -1,14 +1,14 @@
 <template>
   <div class="app-container">
-    <div class="mui-indexed-list-search mui-input-row mui-search">
+    <!-- <div class="mui-indexed-list-search mui-input-row mui-search">
       <input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="输点啥呗" />
-    </div>
+    </div> -->
     
-    <div class="scroll">
+    <!-- <div class="scroll">
           <router-link  tag="a" to="/home/guanzhuinfo">关注</router-link>
           <router-link  tag="a" to="/home">推荐</router-link>
           <router-link  tag="a" to="/home/rebanginfo">热榜</router-link>
-    </div>
+    </div> -->
     <!-- 中间 -->
     
     <transition>
@@ -66,7 +66,7 @@ body {
   overflow-x: hidden;
 }
 
-.scroll {
+/* .scroll {
   display: flex;
   justify-content: space-around;
   position: static;
@@ -76,7 +76,7 @@ body {
 }
 .active{
   color:#2e86de;
-}
+} */
 .mui-icon-plusempty {
   background: #4169e1;
   color: white;

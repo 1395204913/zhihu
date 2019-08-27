@@ -1,5 +1,13 @@
 <template>
   <div class="home">
+    <div class="mui-indexed-list-search mui-input-row mui-search">
+      <input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="输点啥呗" />
+    </div>
+    <div class="scroll">
+      <router-link tag="a" to="/home/guanzhuinfo">关注</router-link>
+      <router-link tag="a" to="/home">推荐</router-link>
+      <router-link tag="a" to="/home/rebanginfo">热榜</router-link>
+    </div>
     <div class="content">
       <ul>
         <router-link
@@ -59,6 +67,17 @@ export default {
 
 * {
   touch-action: pan-y;
+}
+.scroll {
+  display: flex;
+  justify-content: space-around;
+  position: static;
+}
+.scroll a{
+  color:black;
+}
+.active{
+  color:#2e86de;
 }
 .home ul {
   margin-left: 0;

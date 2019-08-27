@@ -1,5 +1,13 @@
 <template>
   <div id="rebang">
+    <div class="mui-indexed-list-search mui-input-row mui-search">
+      <input type="search" class="mui-input-clear mui-indexed-list-search-input" placeholder="输点啥呗" />
+    </div>
+    <div class="scroll">
+      <router-link tag="a" to="/home/guanzhuinfo">关注</router-link>
+      <router-link tag="a" to="/home">推荐</router-link>
+      <router-link tag="a" to="/home/rebanginfo">热榜</router-link>
+    </div>
     <div class="btn">
       <button>全部</button>
       <!-- <router-link tag="button" to="/home/rebanginfo/kexue">科学</router-link> -->
@@ -23,6 +31,17 @@
   </div>
 </template>
 <style>
+.scroll {
+  display: flex;
+  justify-content: space-around;
+  position: static;
+}
+.scroll a{
+  color:black;
+}
+.active{
+  color:#2e86de;
+}
 #rebang .rebanglist {
   margin: 15px;
   padding-bottom: 20px;
@@ -31,10 +50,10 @@
   align-items: center;
   /* justify-content:flex-start; */
 }
-#rebang .btn{
-    margin-top: 10px;
-    display: flex;
-    justify-content:space-around;
+#rebang .btn {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
 }
 #rebang .rebanglist h3 {
   display: inline-block;
@@ -42,13 +61,13 @@
 #rebang .rebanglist div {
   height: 70px;
 }
-#rebang .putong{
-  color:#e67e22;
+#rebang .putong {
+  color: #e67e22;
 }
 #rebang #left {
   margin-right: 10px;
 }
-#rebang .red-class{
+#rebang .red-class {
   color: red;
 }
 #rebang #right {

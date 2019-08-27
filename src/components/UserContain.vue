@@ -1,9 +1,11 @@
 <template>
   <div class="user_page">
     <div class="page1">
-      <!-- <div class="user_search">
-                <input type="search" placeholder="搜索知乎内容"> <img src="http://localhost:8080/static/user_img/saoyisao.png" height="40px"><img src="http://localhost:8080/static/user_img/setting.png" height="40px">
-      </div>-->
+      <div class="user_search">
+        <input type="search" placeholder="搜索知乎内容" id="user_search" />
+        <img src="http://localhost:8080/static/user_img/saoyisao.png" height="40px" />
+        <img src="http://localhost:8080/static/user_img/setting.png" height="40px" />
+      </div>
       <div class="header">
         <div class="userinfo">
           <img
@@ -96,8 +98,8 @@
 <script>
 </script>
 <style>
-  body {
-  background-color: #F6F6F6;
+body {
+  background-color: #f6f6f6;
   margin: 0px;
   padding: 0px;
 }
@@ -105,6 +107,19 @@
   box-shadow: 4px 4px 4px #888888;
   margin: 1rem;
   background-color: #ffffff;
+}
+.page1 {
+  /* background-color: #0084ff; */
+  background-image:linear-gradient(to bottom,#0084ff,skyblue)
+}
+.user_search {
+  display: flex;
+}
+.user_search input {
+  background-color: #0084ff;
+}
+input::-webkit-input-placeholder {
+  color: #f6f6f6;
 }
 
 .user_page .userinfo {
@@ -132,7 +147,7 @@
   color: gray;
   padding-top: 10px;
 }
-.user_page a{
+.user_page a {
   color: black;
 }
 .user_page .chuangzuo {
@@ -157,7 +172,7 @@
   flex-wrap: wrap;
   background-color: #ffffff;
 }
-.user_page .box{
+.user_page .box {
   width: 25%;
   text-align: center;
 }
@@ -167,7 +182,6 @@
             padding: 2rem; */
   width: 25px;
   margin: 15px;
-  
 }
 
 .user_page .box p {
