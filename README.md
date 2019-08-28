@@ -1,21 +1,46 @@
-# zhihu
+### 前言
 
-> A Vue.js project
+在学完Vue后，想着平时自己也经常逛知乎，于是便想着能否利用刚学的Vue来对安卓端的知乎进行web仿写
 
-## Build Setup
+### 过程
 
-``` bash
-# install dependencies
-npm install
+#### 项目搭建
 
-# serve with hot reload at localhost:8080
-npm run dev
+使用的构建工具是webpack，但是我其实对构建项目上并没有很多经验，主要是应用了vue-cli这个脚手架工具，在vue-cli生成的项目的基础上做了一些小的修改
 
-# build for production with minification
-npm run build
+##### 分析
 
-# build for production and view the bundle analyzer report
-npm run build --report
-```
+- 首先在页面底部有5个链接：首页、会员、通知、我的；因此我创建了4个组件
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+- 页面顶端有一个搜索栏，下面是3个链接：关注、推荐、热榜；因此我创建了3个子组件
+
+- 进入页面默认为首页的推荐页面，因此在router.js中添加路由
+
+  ```
+   {path:'/',redirect:'/home'}
+  ```
+
+- 在static中创建2个Json文件（包含作者、赞同数、评论数、文章）和若干需要用到的图片，分别用来存储文章信息和热榜信息；
+
+- 调整组件内元素的布局与样式；
+
+- 使用Vue-Axios从Json中获取数据，再配合vue-for指令渲染整个页面；
+
+- 在router.js中加入组件对应的路由。
+
+### 不足
+
+1. 虽说vue是可以组件化得，我在这里也用到了，但是组件化是一个需要考虑每个应用场景的，同一个组件在不同的view中，展示的会有不一样的地方，所以每种情况显示哪些内容都是需要考虑的。
+
+   比如：列表页的每个话题栏`li`，话题栏是一个组件，但是话题栏有些是没有图片的当没有图片时，你的话题栏`li`的高度可以要自适应，如果多图图片右下角要给出提示。而进入到专栏列表时话题栏左下部需要有时间，而在平时是没有的这个也需要去注意。
+
+2. 没有完成网页头部的滑动切换界面
+
+3. 因只用了json来存储数据，想不到好的方法来让评论数、赞同数互通，因而没有用vuex来管理数据状态
+
+### 效果展示
+
+![](https://ae01.alicdn.com/kf/H9b0c04722a504f9a97dcb252047250c6s.gif)
+
+
+
